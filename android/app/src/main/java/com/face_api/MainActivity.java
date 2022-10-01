@@ -1,4 +1,4 @@
-package com.regula.face.api;
+package com.face_api;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "FaceApi";
+    return "Face_API";
   }
 }

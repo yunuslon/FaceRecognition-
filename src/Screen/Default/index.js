@@ -18,16 +18,17 @@ import FaceSDK, {
   MatchFacesImage,
   MatchFacesSimilarityThresholdSplit,
 } from '@regulaforensics/react-native-face-api';
+import portrait from '../../assets/portrait.png';
 
 var image1 = new MatchFacesImage();
 var image2 = new MatchFacesImage();
 
-export default class App extends Component {
+export default class Default extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      img1: require('./images/portrait.png'),
-      img2: require('./images/portrait.png'),
+      img1: portrait,
+      img2: portrait,
       similarity: 'nil',
       liveness: 'nil',
     };
@@ -81,8 +82,8 @@ export default class App extends Component {
 
   clearResults() {
     this.setState({
-      img1: require('./images/portrait.png'),
-      img2: require('./images/portrait.png'),
+      img1: portrait,
+      img2: portrait,
       similarity: 'nil',
       liveness: 'nil',
     });
@@ -153,7 +154,6 @@ export default class App extends Component {
         <View style={styles.container}>
           <View style={{flexDirection: 'column', padding: 5}}>
             <View style={{flexDirection: 'column', alignItems: 'center'}}>
-              <Text>dd</Text>
               <TouchableHighlight onPress={() => this.pickImage(true)}>
                 <Image
                   style={{
