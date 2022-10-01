@@ -149,6 +149,7 @@ export default class Default extends Component {
   }
 
   render() {
+    console.log(this.state.img1);
     return (
       <View style={styles.container}>
         <View style={styles.container}>
